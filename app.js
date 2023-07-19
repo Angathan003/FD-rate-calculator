@@ -1,7 +1,8 @@
-document.getElementById("calculateBtn").addEventListener("click", fdRate);
+document.getElementById("calculateBtn").addEventListener("click", calculateInterest);
 
-function fdRate() {
-  const months = Number(document.getElementById("input").value);
+function calculateInterest() {
+  const amount = Number(document.getElementById("amountInput").value);
+  const months = Number(document.getElementById("monthsInput").value);
   const rates = [5.8, 6.5, 6.8, 7];
   let rate = 0;
 
@@ -15,6 +16,8 @@ function fdRate() {
     rate = rates[3];
   }
 
+  const interest = (amount * rate * months) / 12 / 100;
+
   let result = document.getElementById("result");
-  result.textContent = "Your interest rate is " + rate + "%";
+  result.innerHTML = `<p>Your interest rate is ${rate}%</p><p>Your interest is ${interest.toFixed(2)}</p>`;
 }
