@@ -50,7 +50,7 @@ button {
   padding: 0 30px;
   letter-spacing: 2px;
   border: none;
-  color: #ffffff;
+  color: #4e07f5;
   text-transform: uppercase;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
@@ -65,4 +65,10 @@ button:hover {
   color: #f8f7f6;
   margin-top: 20px;
   font-size: 32px;
+}
+/* Define the styles you want to apply when the button is clicked */
+.highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
 }

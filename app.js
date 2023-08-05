@@ -18,6 +18,21 @@ function calculateInterest() {
 
   const interest = (amount * rate * months) / 12 / 100;
 
-  let result = document.getElementById("result");
-  result.innerHTML = `<p>Your interest rate is ${rate}%</p><p>Your interest is ${interest.toFixed(2)}</p>`;
+  const resultElement = document.getElementById("result");
+  resultElement.innerHTML = `<p>Your interest rate is ${rate}%</p><p>Your interest is ${interest.toFixed(2)}</p>`;
+}
+
+// Add event listeners for "mousedown" and "mouseup" on the button
+const calculateBtn = document.getElementById("calculateBtn");
+calculateBtn.addEventListener("mousedown", addHighlightClass);
+calculateBtn.addEventListener("mouseup", removeHighlightClass);
+
+function addHighlightClass() {
+  const resultElement = document.getElementById("result");
+  resultElement.classList.add("highlight");
+}
+
+function removeHighlightClass() {
+  const resultElement = document.getElementById("result");
+  resultElement.classList.remove("highlight");
 }
